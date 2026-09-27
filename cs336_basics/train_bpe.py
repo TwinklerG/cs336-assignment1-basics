@@ -5,9 +5,8 @@ from collections import defaultdict
 from cs336_basics.pretokenization_example import find_chunk_boundaries
 from joblib import Parallel, delayed
 
+from cs336_basics.utils import PAT
 from tests.common import FIXTURES_PATH
-
-PAT = r"""'(?:[sdmt]|ll|ve|re)| ?\p{L}+| ?\p{N}+| ?[^\s\p{L}\p{N}]+|\s+(?!\S)|\s+"""
 
 
 def _build_word2cnt(
